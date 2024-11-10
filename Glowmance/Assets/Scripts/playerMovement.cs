@@ -2,12 +2,15 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public Rigidbody2D _rb2D;
+    public GameObject tailGlow;
+    public GameObject buttOff;
     float moveSpeed;
     public float jumpForce;
     bool isJumping;
     float moveHorizontal;
     float moveVertical;
     public bool isLitAf;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +18,12 @@ public class playerMovement : MonoBehaviour
         moveSpeed = 3f;
         // jumpForce = 10f;
         isJumping = false;
+        tailGlow = GameObject.FindWithTag("TailGlow");
+        tailGlow.SetActive(false);
+        buttOff = GameObject.FindWithTag("ButtOff");
+        buttOff.SetActive(true);
+        isLitAf = true;
+
     }
     // Update is called once per frame
     void Update()
@@ -24,6 +33,13 @@ public class playerMovement : MonoBehaviour
         // Moving up and down`
         moveVertical = Input.GetAxisRaw("Vertical");
         // _rb2D.AddForce(xInput * speed, 0, zInput * speed);
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            if (isLitAf){
+                tailGlow.SetActive(true);
+            }
+        }
+        
     }
     void FixedUpdate()
     {
