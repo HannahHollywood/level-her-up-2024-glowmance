@@ -8,6 +8,7 @@ TagManager:
   - TailGlow
   - ButtOff
   - RayTailGlow
+  - loveLetter
   layers:
   - Default
   - TransparentFX

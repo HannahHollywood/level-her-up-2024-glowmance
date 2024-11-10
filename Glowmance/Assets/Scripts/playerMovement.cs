@@ -4,6 +4,7 @@ public class playerMovement : MonoBehaviour
     public Rigidbody2D _rb2D;
     public GameObject tailGlow;
     public GameObject buttOff;
+    public GameObject _loveLetter;
     public Animator luminaMove;
     float moveSpeed;
     public float jumpForce;
@@ -17,6 +18,7 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         _rb2D = gameObject.GetComponent<Rigidbody2D>();
+        _loveLetter = GameObject.FindWithTag("loveLetter");
         moveSpeed = 3f;
         // jumpForce = 10f;
         isJumping = false;
@@ -53,8 +55,8 @@ public class playerMovement : MonoBehaviour
             }
         }
 
-
     }
+
     void FixedUpdate()
     {
         if (moveHorizontal > 0.1f || moveHorizontal < -0.1f)
@@ -75,6 +77,12 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Platform")
         {
             isJumping = false;
+        }
+
+        if (collision.gameObject.tag == "loveLetter")
+        {
+            // letter object is destroyed
+            Destroy(collision.gameObject);
         }
     }
     void OnTriggerExit2D(Collider2D collision)
