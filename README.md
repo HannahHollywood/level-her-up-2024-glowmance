@@ -15,3 +15,5 @@
 - @mandydc10
 - @HannahHollywood
 - @thats-bad-juju
+
+> Note: Open terminal and run `git config --global http.postBuffer 157286400` for git commit issues.
