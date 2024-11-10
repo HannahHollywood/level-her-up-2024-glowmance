@@ -8,10 +8,12 @@
 
 <!--  -->
 
-###### Glowmance is a love story about Lumina the glow worm. Lumina was washed away in a storm and now needs to traverse a puzzling cave to find Flicker, her lover, once more!
+###### Glowmance is a love story about Lumina the glow worm. Lumina was washed away in a storm and now needs to traverse a treacherous cave to find Ray, her lover, once more!
 
 **Brought to you by:**
 
 - @mandydc10
 - @HannahHollywood
 - @thats-bad-juju
+
+> Note: Open terminal and run `git config --global http.postBuffer 157286400` for git commit issues.
