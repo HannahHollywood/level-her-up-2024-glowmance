@@ -10,6 +10,7 @@ public class playerMovement : MonoBehaviour
     float moveHorizontal;
     float moveVertical;
     public bool isLitAf;
+    public bool sceneDark;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,11 +20,11 @@ public class playerMovement : MonoBehaviour
         // jumpForce = 10f;
         isJumping = false;
         tailGlow = GameObject.FindWithTag("TailGlow");
-        tailGlow.SetActive(false);
+        tailGlow.SetActive(true);
         buttOff = GameObject.FindWithTag("ButtOff");
-        buttOff.SetActive(true);
+        buttOff.SetActive(false);
         isLitAf = true;
-
+        sceneDark = false;
     }
     // Update is called once per frame
     void Update()
@@ -35,11 +36,22 @@ public class playerMovement : MonoBehaviour
         // _rb2D.AddForce(xInput * speed, 0, zInput * speed);
         if (Input.GetKeyUp(KeyCode.F))
         {
-            if (isLitAf){
+            // tailGlow.SetActive(false);
+            if (isLitAf == true)
+            {
+                tailGlow.SetActive(false);
+                buttOff.SetActive(true);
+                isLitAf = false;
+            }
+            else
+            {
                 tailGlow.SetActive(true);
+                buttOff.SetActive(false);
+                isLitAf = true;
             }
         }
-        
+
+
     }
     void FixedUpdate()
     {
