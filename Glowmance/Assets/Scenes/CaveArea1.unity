@@ -5078,6 +5078,7 @@ GameObject:
   - component: {fileID: 828533981}
   - component: {fileID: 828533980}
   - component: {fileID: 828533984}
+  - component: {fileID: 828533985}
   m_Layer: 0
   m_Name: Lumina
   m_TagString: Player
@@ -5102,6 +5103,7 @@ MonoBehaviour:
   buttOff: {fileID: 0}
   jumpForce: 10
   isLitAf: 0
+  sceneDark: 0
 --- !u!50 &828533981
 Rigidbody2D:
   serializedVersion: 5
@@ -5248,6 +5250,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.4, y: 2.29}
   m_EdgeRadius: 0
+--- !u!95 &828533985
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828533979}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4ef9f42352e1f424d927367964dd564f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &864074416
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ public class playerMovement : MonoBehaviour
     public Rigidbody2D _rb2D;
     public GameObject tailGlow;
     public GameObject buttOff;
+    public Animator luminaMove;
     float moveSpeed;
     public float jumpForce;
     bool isJumping;
@@ -25,6 +26,7 @@ public class playerMovement : MonoBehaviour
         buttOff.SetActive(false);
         isLitAf = true;
         sceneDark = false;
+        luminaMove = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -65,6 +67,8 @@ public class playerMovement : MonoBehaviour
             // jump
             _rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
         }
+        // Debug.Log(_rb2D.linearVelocityX);
+        luminaMove.SetFloat("Speed", Mathf.Abs(_rb2D.linearVelocityX));
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
