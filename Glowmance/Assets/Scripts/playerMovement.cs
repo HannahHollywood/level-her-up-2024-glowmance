@@ -62,9 +62,15 @@ public class playerMovement : MonoBehaviour
         {
             // jump
             _rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
+            luminaMove.SetBool("Jump", true);
+        }
+        else
+        {
+            luminaMove.SetBool("Jump", false);
         }
         // Debug.Log(_rb2D.linearVelocityX);
         luminaMove.SetFloat("Speed", Mathf.Abs(_rb2D.linearVelocityX));
+
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
