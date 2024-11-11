@@ -9,6 +9,7 @@ TagManager:
   - ButtOff
   - RayTailGlow
   - loveLetter
+  - spider
   layers:
   - Default
   - TransparentFX
