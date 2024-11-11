@@ -10,6 +10,7 @@ TagManager:
   - RayTailGlow
   - loveLetter
   - spider
+  - fallDeath
   layers:
   - Default
   - TransparentFX

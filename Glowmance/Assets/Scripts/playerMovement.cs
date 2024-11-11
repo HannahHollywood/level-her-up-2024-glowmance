@@ -109,13 +109,14 @@ public class playerMovement : MonoBehaviour
         // Spider kills Lumina
         if (collision.gameObject.tag == "spider")
         {
-            // letter object is destroyed
+            // Lumina is destroyed
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "fallDeath")
         {
-            gameObject.transform.position = startPos;
+            Destroy(gameObject);
+            // gameObject.transform.position = startPos;
         }
     }
     void OnTriggerExit2D(Collider2D collision)

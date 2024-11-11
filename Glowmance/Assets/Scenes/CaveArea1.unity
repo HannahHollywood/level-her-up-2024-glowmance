@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 65288684}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (3)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -756,7 +756,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 84380549}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (4)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -974,7 +974,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1003,7 +1003,7 @@ GameObject:
   - component: {fileID: 106911256}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (2)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1108,7 +1108,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1861,7 +1861,7 @@ GameObject:
   - component: {fileID: 265194951}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 - Platform (2)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1911,7 +1911,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2302,7 +2302,7 @@ GameObject:
   - component: {fileID: 316113376}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (5)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2407,7 +2407,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2436,7 +2436,7 @@ GameObject:
   - component: {fileID: 356414141}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (1)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2541,7 +2541,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2570,7 +2570,7 @@ GameObject:
   - component: {fileID: 372786389}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (3)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2675,7 +2675,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -3552,7 +3552,7 @@ GameObject:
   - component: {fileID: 503992416}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (2)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3657,7 +3657,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4387,7 +4387,7 @@ GameObject:
   - component: {fileID: 669553544}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (1)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4492,7 +4492,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4783,7 +4783,7 @@ GameObject:
   - component: {fileID: 750243757}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (5)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4888,7 +4888,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4917,7 +4917,7 @@ GameObject:
   - component: {fileID: 759682725}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (5)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5022,7 +5022,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5051,7 +5051,7 @@ GameObject:
   - component: {fileID: 761333940}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (4)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5156,7 +5156,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5459,7 +5459,7 @@ GameObject:
   - component: {fileID: 817878064}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 - Platform (1)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5509,7 +5509,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5639,7 +5639,7 @@ GameObject:
   - component: {fileID: 821946105}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (6)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5744,7 +5744,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5882,7 +5882,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb2D: {fileID: 828533981}
-  luminaMove: {fileID: 0}
+  _sr: {fileID: 0}
+  animator: {fileID: 0}
   moveSpeed: 0
   jumpForce: 6
   isLitAf: 0
@@ -10640,7 +10641,7 @@ GameObject:
   - component: {fileID: 1618213596}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (4)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10745,7 +10746,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -10858,7 +10859,7 @@ GameObject:
   - component: {fileID: 1657560409}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (2)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10963,7 +10964,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -10990,6 +10991,7 @@ GameObject:
   - component: {fileID: 1660839188}
   - component: {fileID: 1660839187}
   - component: {fileID: 1660839189}
+  - component: {fileID: 1660839190}
   m_Layer: 0
   m_Name: big-spider-purple
   m_TagString: spider
@@ -11089,6 +11091,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &1660839190
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660839186}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.48, y: 0}
+  m_Size: {x: 6.75, y: 1.9}
+  m_Direction: 0
 --- !u!1 &1660923158
 GameObject:
   m_ObjectHideFlags: 0
@@ -12038,7 +12077,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 2099569724, guid: b425613db706e0a49821a35253ec9db1, type: 3}
-  m_Color: {r: 0.03773582, g: 0.005517973, b: 0.005517973, a: 1}
+  m_Color: {r: 0.03773582, g: 0.005517973, b: 0.005517973, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13421,7 +13460,7 @@ GameObject:
   - component: {fileID: 1888748605}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (1)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13526,7 +13565,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -13643,7 +13682,7 @@ GameObject:
   - component: {fileID: 1940016514}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 - Platform (3)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13693,7 +13732,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -14048,7 +14087,7 @@ GameObject:
   - component: {fileID: 2105834742}
   m_Layer: 0
   m_Name: Tilesheet - WOODS_25 (3)
-  m_TagString: Untagged
+  m_TagString: fallDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14153,7 +14192,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
