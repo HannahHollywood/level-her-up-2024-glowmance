@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class playerMovement : MonoBehaviour
     float moveHorizontal;
     float moveVertical;
     public bool isLitAf;
-    private Vector2 startPos;
+    private Vector3 startPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +27,7 @@ public class playerMovement : MonoBehaviour
         isLitAf = true;
         isJumping = false;
         moveSpeed = 3f;
-        startPos = gameObject.transform.position;
+        startPos = transform.position;
         // jumpForce = 10f;
     }
 
@@ -99,24 +100,38 @@ public class playerMovement : MonoBehaviour
             isJumping = false;
         }
 
+        // Lumina falls to her death / respawn
+        if (collision.gameObject.tag == "fallDeath")
+        {
+            // Destroy(gameObject);
+
+            // TO DO create text with 'Dead' message
+
+            // Respawn at start
+            transform.position = startPos;
+        }
+
+        // Spider moves to Lumina if light is on
+        // if (collision.gameObject.tag == "TailGlow" &&)
+
+        // Spider kills Lumina / respawn
+        if (collision.gameObject.tag == "spider" && isLitAf == true)
+        {
+            // Lumina is destroyed
+            // Destroy(gameObject);
+
+            // TO DO create text with 'Dead' message
+
+            // Respawn at start
+            transform.position = startPos;
+        }
+
         // Lumina picks up love letter
         if (collision.gameObject.tag == "loveLetter")
         {
             // letter object is destroyed
             Destroy(collision.gameObject);
-        }
-
-        // Spider kills Lumina
-        if (collision.gameObject.tag == "spider")
-        {
-            // Lumina is destroyed
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.tag == "fallDeath")
-        {
-            Destroy(gameObject);
-            // gameObject.transform.position = startPos;
+            // TO DO Create text with letter copy
         }
     }
     void OnTriggerExit2D(Collider2D collision)
@@ -128,3 +143,4 @@ public class playerMovement : MonoBehaviour
         }
     }
 }
+
