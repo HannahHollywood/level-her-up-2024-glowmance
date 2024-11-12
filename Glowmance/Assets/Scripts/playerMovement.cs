@@ -53,8 +53,6 @@ public class playerMovement : MonoBehaviour
                 isLitAf = true;
             }
         }
-
-
     }
 
     void FixedUpdate()
