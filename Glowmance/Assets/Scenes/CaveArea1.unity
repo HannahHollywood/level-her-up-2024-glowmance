@@ -5401,7 +5401,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &797633513
 Canvas:
   m_ObjectHideFlags: 0
@@ -5411,7 +5411,7 @@ Canvas:
   m_GameObject: {fileID: 797633510}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -5434,7 +5434,7 @@ RectTransform:
   m_GameObject: {fileID: 797633510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1372651882}
@@ -5442,9 +5442,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 960, y: 540}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &817878060
 GameObject:
   m_ObjectHideFlags: 0
@@ -7161,7 +7161,7 @@ Transform:
   m_GameObject: {fileID: 1111207954}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.7, y: -0.59, z: 0}
+  m_LocalPosition: {x: 2.5, y: 1.58, z: 0}
   m_LocalScale: {x: 0.3738318, y: 0.34974784, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9260,9 +9260,10 @@ GameObject:
   - component: {fileID: 1372651884}
   - component: {fileID: 1372651883}
   - component: {fileID: 1372651885}
+  - component: {fileID: 1372651886}
   m_Layer: 5
   m_Name: LoveLetterText
-  m_TagString: Untagged
+  m_TagString: textLoveLetter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9275,7 +9276,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372651881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -5.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9283,7 +9284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -937.77, y: -540.2}
+  m_AnchoredPosition: {x: -953.06, y: -537.74}
   m_SizeDelta: {x: 62.7, y: 51.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1372651883
@@ -9307,8 +9308,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Lumina - the light of my life! \n\nI glow dimmer each night without you.
-    \n\nI eagerly await your return, perched atop our little ledge, in front of our
-    abode, hoping that any flicker of my light might guide you back to me. \n\nCome
+    \n\nEagerly, I await your return, perched atop our little ledge, in front of
+    our abode, hoping that every flicker of my light may guide you back to me. \n\nCome
     home, my love, so we can be together once more!\n\nLove, your Ray (shining just
     for you!)"
   m_isRightToLeft: 0
@@ -9319,8 +9320,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9402,6 +9403,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 3
+--- !u!61 &1372651886
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372651881}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -44.3, y: -6.3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 12.23, y: 10.41}
+  m_EdgeRadius: 0
 --- !u!1 &1391703175
 GameObject:
   m_ObjectHideFlags: 0
@@ -11329,7 +11376,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.66
   m_Color: {r: 0.9529412, g: 0.79607844, b: 0.25490198, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000

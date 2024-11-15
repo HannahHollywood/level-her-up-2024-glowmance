@@ -1,11 +1,14 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 public class playerMovement : MonoBehaviour
 {
     public Rigidbody2D _rb2D;
     public SpriteRenderer _sr;
     GameObject tailGlow;
     GameObject loveLetter;
+    GameObject loveLetterText;
     public Animator animator;
     public float moveSpeed;
     public float jumpForce;
@@ -22,6 +25,7 @@ public class playerMovement : MonoBehaviour
         _sr = gameObject.GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         loveLetter = GameObject.FindWithTag("loveLetter");
+        loveLetterText = GameObject.FindWithTag("textLoveLetter");
         tailGlow = GameObject.FindWithTag("TailGlow");
         tailGlow.SetActive(true);
         isLitAf = true;
@@ -130,6 +134,7 @@ public class playerMovement : MonoBehaviour
             // letter object is destroyed
             Destroy(collision.gameObject);
             // TO DO Create text with letter copy
+            // loveLetterText = true;
         }
     }
     void OnTriggerExit2D(Collider2D collision)

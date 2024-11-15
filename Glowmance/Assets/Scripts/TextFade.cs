@@ -25,6 +25,15 @@ public class TextFade : MonoBehaviour
             loveLetterText.color = new Color(loveLetterText.color.r, loveLetterText.color.g, loveLetterText.color.b, alphaValue);
             fadeTime -= Time.deltaTime;
         }
+    }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        // When on ground, Lumina 'not jumping'
+        if (collision.gameObject.tag == "Player")
+        {
+            loveLetterText.color = new Color(loveLetterText.color.r, loveLetterText.color.g, loveLetterText.color.b, 255);
+
+        }
     }
 }

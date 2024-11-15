@@ -11,6 +11,7 @@ TagManager:
   - loveLetter
   - spider
   - fallDeath
+  - textLoveLetter
   layers:
   - Default
   - TransparentFX
