@@ -12,6 +12,7 @@ TagManager:
   - spider
   - fallDeath
   - textLoveLetter
+  - dialogueBox
   layers:
   - Default
   - TransparentFX
