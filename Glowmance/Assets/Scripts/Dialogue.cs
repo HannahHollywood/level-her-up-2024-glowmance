@@ -22,7 +22,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             if (_textComponent.text == _lines[_index])
             {
@@ -71,10 +71,11 @@ public class Dialogue : MonoBehaviour
 // Lumina,
 
 // The light of my life, I glow dimmer each night without you!
+//"Now that you have found my letter, you may return here whenever you are at your peril"<br>(PRESS ENTER)
 
 // Perched atop our little ledge I wait, hoping that every flicker of my light may guide you back home to safety. 
 
-// Shining just for you,
+// "I hope to see you soon, yours glowing eternally, Ray"<br>(PRESS ENTER)
 // Ray
 
 

@@ -175,9 +175,10 @@ public class playerMovement : MonoBehaviour
     {
         Debug.Log("coroutine started");
         // Wait 2 sedonds
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(.75f);
         // Show dialogue box
         _dialogueBox.SetActive(true);
+        _dialogueBox.GetComponent<Image>().color = new Color(_dialogueBox.GetComponent<Image>().color.r, _dialogueBox.GetComponent<Image>().color.g, _dialogueBox.GetComponent<Image>().color.b, 255);
         // Run dialogue script
         _dialogueScript.StartDialogue();
     }
