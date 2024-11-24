@@ -13,6 +13,8 @@ public class playerMovement : MonoBehaviour
     Animator _animator;
     public GameObject _dialogueBox;
     Dialogue _dialogueScript;
+    public GameObject _gm;
+    public GameManager GameManager;
     [SerializeField] float _moveSpeed;
     [SerializeField] float _jumpForce;
     [SerializeField] bool _isJumping;
@@ -27,6 +29,8 @@ public class playerMovement : MonoBehaviour
     {
         _dialogueBox = GameObject.FindGameObjectWithTag("dialogueBox");
         _dialogueScript = _dialogueBox.GetComponent<Dialogue>();
+        _gm = GameObject.FindGameObjectWithTag("GameManager");
+        GameManager = _gm.GetComponent<GameManager>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -143,6 +147,12 @@ public class playerMovement : MonoBehaviour
             // Open dialogue box
             StartCoroutine(LoveLetterTextPopup());
 
+        }
+
+        if (collision.gameObject.tag == "Ray")
+        {
+            Debug.Log("Ray and Lumina collide");
+            GameManager.GameOver();
         }
     }
     void OnTriggerExit2D(Collider2D collision)
