@@ -13,6 +13,9 @@ TagManager:
   - fallDeath
   - textLoveLetter
   - dialogueBox
+  - endMenu
+  - Ray
+  - GameManager
   layers:
   - Default
   - TransparentFX

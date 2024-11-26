@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem;
+using System;
 
 public class Dialogue : MonoBehaviour
 {
@@ -9,14 +10,13 @@ public class Dialogue : MonoBehaviour
     [SerializeField] string[] _lines;
     [SerializeField] float _textSpeed;
     int _index;
+    public bool _dialogueRunning;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gameObject.SetActive(false);
         _textComponent.text = string.Empty;
-        // Debug.Log(_textComponent.text);
-        // StartDialogue();
     }
 
     // Update is called once per frame
@@ -39,6 +39,7 @@ public class Dialogue : MonoBehaviour
     public void StartDialogue()
     {
         _index = 0;
+        _dialogueRunning = true;
         StartCoroutine(TypeLine());
         Debug.Log("dialogue started");
     }
@@ -62,6 +63,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            _dialogueRunning = false;
             gameObject.SetActive(false);
         }
     }

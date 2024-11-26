@@ -13,6 +13,8 @@ public class playerMovement : MonoBehaviour
     Animator _animator;
     public GameObject _dialogueBox;
     Dialogue _dialogueScript;
+    public GameObject _gm;
+    public GameManager GameManager;
     [SerializeField] float _moveSpeed;
     [SerializeField] float _jumpForce;
     [SerializeField] bool _isJumping;
@@ -27,6 +29,8 @@ public class playerMovement : MonoBehaviour
     {
         _dialogueBox = GameObject.FindGameObjectWithTag("dialogueBox");
         _dialogueScript = _dialogueBox.GetComponent<Dialogue>();
+        _gm = GameObject.FindGameObjectWithTag("GameManager");
+        GameManager = _gm.GetComponent<GameManager>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -74,37 +78,40 @@ public class playerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_moveHorizontal > 0.1f || _moveHorizontal < -0.1f)
+        if (GameManager._pauseMovement == false)
         {
-            // vector2(left/right, y-axis), and then forcemode (some will add Time.Deltatime instead, but this is applied by default to ForceMode)
-            _rb2D.AddForce(new Vector2(_moveHorizontal * _moveSpeed, 0f), ForceMode2D.Impulse);
-
-            // If looking left, flip Lumina left, else if right, flip right
-            if (_moveHorizontal < -0.1f)
+            if (_moveHorizontal > 0.1f || _moveHorizontal < -0.1f)
             {
-                _sr.flipX = false;
+                // vector2(left/right, y-axis), and then forcemode (some will add Time.Deltatime instead, but this is applied by default to ForceMode)
+                _rb2D.AddForce(new Vector2(_moveHorizontal * _moveSpeed, 0f), ForceMode2D.Impulse);
+
+                // If looking left, flip Lumina left, else if right, flip right
+                if (_moveHorizontal < -0.1f)
+                {
+                    _sr.flipX = false;
+                }
+                else
+                {
+                    _sr.flipX = true;
+                }
+            }
+
+            if (!_isJumping && _moveVertical > 0.1f)
+            {
+                // jump
+                _rb2D.AddForce(new Vector2(0f, _moveVertical * _jumpForce), ForceMode2D.Impulse);
+                // Sets the animator transition condition to active
+                _animator.SetBool("Jump", true);
             }
             else
             {
-                _sr.flipX = true;
+                // Sets the animator transition condition to inactive
+                _animator.SetBool("Jump", false);
             }
-        }
 
-        if (!_isJumping && _moveVertical > 0.1f)
-        {
-            // jump
-            _rb2D.AddForce(new Vector2(0f, _moveVertical * _jumpForce), ForceMode2D.Impulse);
-            // Sets the animator transition condition to active
-            _animator.SetBool("Jump", true);
+            // Sets the animator transition condition speed to match Lumina velocity
+            _animator.SetFloat("Speed", Mathf.Abs(_rb2D.linearVelocityX));
         }
-        else
-        {
-            // Sets the animator transition condition to inactive
-            _animator.SetBool("Jump", false);
-        }
-
-        // Sets the animator transition condition speed to match Lumina velocity
-        _animator.SetFloat("Speed", Mathf.Abs(_rb2D.linearVelocityX));
 
     }
 
@@ -144,11 +151,17 @@ public class playerMovement : MonoBehaviour
             StartCoroutine(LoveLetterTextPopup());
 
         }
+
+        if (collision.gameObject.tag == "Ray")
+        {
+            Debug.Log("Ray and Lumina collide");
+            GameManager.GameOver();
+        }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         // When not on ground, Lumina 'is jumping'
-        if (collision.gameObject.tag == "Platform")
+        if (GameManager._pauseMovement == false && collision.gameObject.tag == "Platform")
         {
             _isJumping = true;
         }
