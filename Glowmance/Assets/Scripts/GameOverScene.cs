@@ -13,7 +13,7 @@ public class GameOverScene : MonoBehaviour
 
     public void RestartButton()
     {
-        SceneManager.LoadScene("MainGlowwormCave");
+        SceneManager.LoadScene("CaveArea1");
     }
 
     public void ExitButton()
