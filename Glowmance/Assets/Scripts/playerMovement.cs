@@ -13,6 +13,7 @@ public class playerMovement : MonoBehaviour
     Animator _animator;
     public GameObject _dialogueBox;
     Dialogue _dialogueScript;
+    public GameObject _respawnMessage;
     public GameObject _gm;
     public GameManager GameManager;
     [SerializeField] float _moveSpeed;
