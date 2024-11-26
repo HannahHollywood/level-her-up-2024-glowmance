@@ -45,7 +45,7 @@ public class spiderBehaviour : MonoBehaviour
             _spiderAnimate.SetBool("isNearLumina", false);
         }
 
-        // TO DO - make this work (spider sprite has disappeared..)
+        // TO DO - make this work 
         // if (_luminaNear == true && _luminaLight.activeSelf == true)
         // {
         //     // move spider towards Lumina

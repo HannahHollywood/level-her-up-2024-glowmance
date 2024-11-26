@@ -5,10 +5,14 @@ public class GameManager : MonoBehaviour
 {
     public GameObject endGame;
     public GameOverScene gameOverScene;
+    public GameObject dialogueBox;
+    Dialogue _dialogue;
+    public bool _pauseMovement;
 
     void Awake()
     {
         gameOverScene = endGame.GetComponent<GameOverScene>();
+        _dialogue = dialogueBox.GetComponent<Dialogue>();
     }
     public void GameOver()
     {
@@ -24,6 +28,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_dialogue._dialogueRunning == true || gameOverScene.gameOverActive == true)
+        {
+            _pauseMovement = true;
+        }
+        else
+        {
+            _pauseMovement = false;
+        }
 
     }
 }
