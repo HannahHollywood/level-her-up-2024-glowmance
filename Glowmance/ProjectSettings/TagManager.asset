@@ -8,6 +8,11 @@ TagManager:
   - TailGlow
   - ButtOff
   - RayTailGlow
+  - loveLetter
+  - spider
+  - fallDeath
+  - textLoveLetter
+  - dialogueBox
   layers:
   - Default
   - TransparentFX
