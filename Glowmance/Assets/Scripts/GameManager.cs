@@ -7,12 +7,15 @@ public class GameManager : MonoBehaviour
     public GameOverScene gameOverScene;
     public GameObject dialogueBox;
     Dialogue _dialogue;
+    public GameObject respawnMessage;
+    RespawnMessage _respawnMessageScript;
     public bool _pauseMovement;
 
     void Awake()
     {
         gameOverScene = endGame.GetComponent<GameOverScene>();
         _dialogue = dialogueBox.GetComponent<Dialogue>();
+        _respawnMessageScript = respawnMessage.GetComponent<RespawnMessage>();
     }
     public void GameOver()
     {
@@ -20,15 +23,11 @@ public class GameManager : MonoBehaviour
         gameOverScene.Setup();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (_dialogue._dialogueRunning == true || gameOverScene.gameOverActive == true)
+        if (_dialogue._dialogueRunning == true || gameOverScene.gameOverActive == true || _respawnMessageScript._dialogueRunning == true)
         {
             _pauseMovement = true;
         }
@@ -38,4 +37,9 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    // void Respawn()
+    // {
+
+    // }
 }

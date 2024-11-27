@@ -1774,14 +1774,14 @@ GameObject:
   - component: {fileID: 200525444}
   - component: {fileID: 200525447}
   - component: {fileID: 200525446}
-  - component: {fileID: 200525445}
+  - component: {fileID: 200525448}
   m_Layer: 5
   m_Name: Respawn message
   m_TagString: respawnMessage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &200525444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1802,29 +1802,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 75}
   m_SizeDelta: {x: -1000, y: -650}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &200525445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200525443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a06b8bdeaffb4c2d981bde238b00b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _textComponent: {fileID: 525442338}
-  _lines:
-  - '"Lumina, the light of my life, I glow dimmer each night without you! "<br><br>(PRESS
-    ENTER)'
-  - '"Now that you have found my letter, you may return to this place whenever you
-    find yourself in peril"<br><br>(PRESS ENTER)'
-  - '"Perched atop our little ledge I wait, hoping that every flicker of my light
-    may guide you back home to safety. " <br><br>PRESS ENTER'
-  - '"I hope to see you soon, yours glowing eternally, Ray"<br><br>(PRESS ENTER)'
-  _textSpeed: 0.05
-  _dialogueRunning: 0
 --- !u!114 &200525446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1863,6 +1840,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200525443}
   m_CullTransparentMesh: 1
+--- !u!114 &200525448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200525443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d75246a9a7ac49e1834d0a7d5934876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textComponent: {fileID: 525442338}
 --- !u!1 &219504960
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,7 +4155,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -60, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525442338
 MonoBehaviour:
@@ -4187,8 +4177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh, no! Lumina has fallen into darkness - she will respawn at her closet
-    checkpoint.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ad730738aca7464284440407715fe32, type: 2}
   m_sharedMaterial: {fileID: -2009979101318598837, guid: 5ad730738aca7464284440407715fe32, type: 2}
@@ -6153,7 +6142,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -60, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787648896
 MonoBehaviour:
@@ -6794,6 +6783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueBox: {fileID: 0}
+  _respawnMessage: {fileID: 200525443}
+  _respawnScript: {fileID: 0}
   _gm: {fileID: 0}
   GameManager: {fileID: 0}
   _moveSpeed: 0
@@ -13912,6 +13903,7 @@ MonoBehaviour:
   endGame: {fileID: 1522340483}
   gameOverScene: {fileID: 0}
   dialogueBox: {fileID: 1711159229}
+  respawnMessage: {fileID: 0}
   _pauseMovement: 0
 --- !u!1 &1875409059
 GameObject:
