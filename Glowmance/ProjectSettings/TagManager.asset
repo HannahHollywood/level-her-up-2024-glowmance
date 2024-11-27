@@ -17,6 +17,7 @@ TagManager:
   - Ray
   - GameManager
   - respawnMessage
+  - playerInstructions
   layers:
   - Default
   - TransparentFX

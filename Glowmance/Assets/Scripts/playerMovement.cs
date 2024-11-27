@@ -179,7 +179,6 @@ public class playerMovement : MonoBehaviour
 
     IEnumerator LoveLetterTextPopup()
     {
-        Debug.Log("coroutine started");
         // Wait 2 sedonds
         yield return new WaitForSeconds(.75f);
         // Show dialogue box
