@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     RespawnMessage _respawnMessageScript;
     public GameObject _staticInstructions;
     staticInstructions _staticInstructionsScript;
+    public GameObject _instructionsTutorial;
+    PlayerInstructionsInteractive _instructionsTutorialScript;
     public bool _pauseMovement;
 
     void Awake()
@@ -19,12 +22,15 @@ public class GameManager : MonoBehaviour
         _dialogue = dialogueBox.GetComponent<Dialogue>();
         _respawnMessageScript = respawnMessage.GetComponent<RespawnMessage>();
         _staticInstructionsScript = _staticInstructions.GetComponent<staticInstructions>();
+        _instructionsTutorialScript = _instructionsTutorial.GetComponent<PlayerInstructionsInteractive>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // add instructions for game play
+        Debug.Log("Game start");
+        StartCoroutine(StartTutorial());
     }
 
     // Update is called once per frame
@@ -49,6 +55,15 @@ public class GameManager : MonoBehaviour
     public void showInstructions()
     {
         _staticInstructionsScript.showInstructionsBox();
+    }
+
+    IEnumerator StartTutorial()
+    {
+        Debug.Log("Tutorial started");
+        yield return new WaitForSeconds(2);
+        _instructionsTutorial.SetActive(true);
+        _instructionsTutorial.GetComponent<Image>().color = new Color(_instructionsTutorial.GetComponent<Image>().color.r, _instructionsTutorial.GetComponent<Image>().color.g, _instructionsTutorial.GetComponent<Image>().color.b, 240);
+        _instructionsTutorialScript.StartInstructions();
     }
 
 }

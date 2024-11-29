@@ -28,3 +28,13 @@ public class staticInstructions : MonoBehaviour
 
     }
 }
+
+// <b>Controls</b>
+// <br>
+// <color=#C2CB5C> Left Arrow </color=#C2CB5C>or <color=#C2CB5C>  'a' key </color=#C2CB5C>- Move left
+// <br>
+// <color=#C2CB5C> Right Arrow </color=#C2CB5C>or <color=#C2CB5C>  'd' key </color=#C2CB5C>- Move right
+// <br>
+// <color=#C2CB5C> Up Arrow </color=#C2CB5C> or <color=#C2CB5C>  'w' key </color=#C2CB5C> - Jump
+// <br>
+// <color=#C2CB5C>  'f' key </color=#C2CB5C> - Toggle glow tail light on and off

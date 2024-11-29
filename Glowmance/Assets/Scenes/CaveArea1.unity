@@ -1873,7 +1873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &211960806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1891,8 +1891,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 900, y: 400}
+  m_AnchoredPosition: {x: 0, y: 152.4}
+  m_SizeDelta: {x: 1150.9, y: 166.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211960807
 MonoBehaviour:
@@ -1907,7 +1907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.015686275, g: 0.003921569, b: 0.015686275, a: 0.9411765}
+  m_Color: {r: 0.015686275, g: 0.003921569, b: 0.015686275, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1944,16 +1944,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0290776031a394560952dc8f5493ecd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textComponent: {fileID: 0}
+  _textComponent: {fileID: 455076593}
   _lines:
-  - <color="Orange"> Left Arrow </color="Orange">or <color="Orange">  'a' key </color="Orange">-
-    Move left
-  - <color="Orange"> Right Arrow </color="Orange">or <color="Orange">  'd' key </color="Orange">-
-    Move right
-  - <color="Orange"> Up Arrow </color="Orange"> or <color="Orange">  'w' key </color="Orange">
-    - Jump
-  - <color="Orange">  'f' key </color="Orange"> - Toggle glow tail light on and off
-  _textSpeed: 0
+  - Press the right arrow key or 'd' key to move Lumina right
+  - Press the left arrow key or 'a' key to move Lumina left
+  - Press the up arrow key or 'w' key to make Lumina jump
+  - Press the 'f' key to toggle Lumina's tail glow light on and off
+  _textSpeed: 0.05
   _dialogueRunning: 0
 --- !u!1 &219504960
 GameObject:
@@ -14674,6 +14671,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 1711159229}
   respawnMessage: {fileID: 200525443}
   _staticInstructions: {fileID: 1898745108}
+  _instructionsTutorial: {fileID: 211960805}
   _pauseMovement: 0
 --- !u!1 &1875409059
 GameObject:
@@ -15929,7 +15927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1898745109
 RectTransform:
   m_ObjectHideFlags: 0

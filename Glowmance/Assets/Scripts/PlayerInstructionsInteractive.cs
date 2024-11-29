@@ -21,24 +21,37 @@ public class PlayerInstructionsInteractive : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (_textComponent.text == _lines[_index])
-            {
-                NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                _textComponent.text = _lines[_index];
-            }
+            StopAllCoroutines();
+            _textComponent.text = _lines[_index];
+        }
+
+        if (_textComponent.text == _lines[0] && (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)))
+        {
+            NextLine();
+        }
+
+        if (_textComponent.text == _lines[1] && (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)))
+        {
+            NextLine();
+        }
+
+        if (_textComponent.text == _lines[2] && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
+        {
+            NextLine();
+        }
+
+        if (_textComponent.text == _lines[3] && Input.GetKeyDown(KeyCode.F))
+        {
+            NextLine();
         }
     }
 
     public void StartInstructions()
     {
+        Debug.Log("Instructions started");
         _index = 0;
         _dialogueRunning = true;
         StartCoroutine(TypeLine());
-        Debug.Log("dialogue started");
     }
 
     IEnumerator TypeLine()
@@ -66,13 +79,7 @@ public class PlayerInstructionsInteractive : MonoBehaviour
     }
 }
 
-
-// <b>Controls</b>
-// <br>
-// <color=#C2CB5C> Left Arrow </color=#C2CB5C>or <color=#C2CB5C>  'a' key </color=#C2CB5C>- Move left
-// <br>
-// <color=#C2CB5C> Right Arrow </color=#C2CB5C>or <color=#C2CB5C>  'd' key </color=#C2CB5C>- Move right
-// <br>
-// <color=#C2CB5C> Up Arrow </color=#C2CB5C> or <color=#C2CB5C>  'w' key </color=#C2CB5C> - Jump
-// <br>
-// <color=#C2CB5C>  'f' key </color=#C2CB5C> - Toggle glow tail light on and off
+// Press the right arrow key or 'd' key to move Lumina right
+// Press the left arrow key or 'a' key to move Lumina left
+// Press the up arrow key or 'w' key to make Lumina jump
+// Press the 'f' key to toggle Lumina's tail glow light on and off

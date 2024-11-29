@@ -33,7 +33,7 @@ public class RespawnMessage : MonoBehaviour
 
         // Show respawn message box
         gameObject.SetActive(true);
-        _respawnBg.GetComponent<Image>().color = new Color(_respawnBg.GetComponent<Image>().color.r, _respawnBg.GetComponent<Image>().color.g, _respawnBg.GetComponent<Image>().color.b, 255);
+        _respawnBg.GetComponent<Image>().color = new Color(_respawnBg.GetComponent<Image>().color.r, _respawnBg.GetComponent<Image>().color.g, _respawnBg.GetComponent<Image>().color.b, 240);
 
         StartCoroutine(RespawnWait());
     }

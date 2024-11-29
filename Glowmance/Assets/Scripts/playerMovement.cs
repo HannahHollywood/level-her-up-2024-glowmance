@@ -183,7 +183,7 @@ public class playerMovement : MonoBehaviour
         yield return new WaitForSeconds(.75f);
         // Show dialogue box
         _dialogueBox.SetActive(true);
-        _dialogueBox.GetComponent<Image>().color = new Color(_dialogueBox.GetComponent<Image>().color.r, _dialogueBox.GetComponent<Image>().color.g, _dialogueBox.GetComponent<Image>().color.b, 255);
+        _dialogueBox.GetComponent<Image>().color = new Color(_dialogueBox.GetComponent<Image>().color.r, _dialogueBox.GetComponent<Image>().color.g, _dialogueBox.GetComponent<Image>().color.b, 240);
         // Run dialogue script
         _dialogueScript.StartDialogue();
     }
