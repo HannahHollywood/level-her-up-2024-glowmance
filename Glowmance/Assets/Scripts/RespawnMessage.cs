@@ -28,7 +28,7 @@ public class RespawnMessage : MonoBehaviour
         _dialogueRunning = true;
         if (deathType == 1)
         {
-            _textComponent.text = "Oh no! The spider has eaten Lumina! She will respawn at her closest checkpoint.";
+            _textComponent.text = "Oh no! The spider seemed agitated by the light and has attacked Lumina! Lumina will respawn at her closest checkpoint.";
         }
 
         // Show respawn message box
