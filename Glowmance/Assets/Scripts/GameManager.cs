@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     Dialogue _dialogue;
     public GameObject respawnMessage;
     RespawnMessage _respawnMessageScript;
+    public GameObject _staticInstructions;
+    staticInstructions _staticInstructionsScript;
     public bool _pauseMovement;
 
     void Awake()
@@ -16,11 +18,9 @@ public class GameManager : MonoBehaviour
         gameOverScene = endGame.GetComponent<GameOverScene>();
         _dialogue = dialogueBox.GetComponent<Dialogue>();
         _respawnMessageScript = respawnMessage.GetComponent<RespawnMessage>();
+        _staticInstructionsScript = _staticInstructions.GetComponent<staticInstructions>();
     }
-    public void GameOver()
-    {
-        gameOverScene.Setup();
-    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,6 +39,16 @@ public class GameManager : MonoBehaviour
             _pauseMovement = false;
         }
 
+    }
+
+    public void GameOver()
+    {
+        gameOverScene.Setup();
+    }
+
+    public void showInstructions()
+    {
+        _staticInstructionsScript.showInstructionsBox();
     }
 
 }

@@ -18,6 +18,8 @@ TagManager:
   - GameManager
   - respawnMessage
   - playerInstructions
+  - staticInstructions
+  - interactiveInstructions
   layers:
   - Default
   - TransparentFX
