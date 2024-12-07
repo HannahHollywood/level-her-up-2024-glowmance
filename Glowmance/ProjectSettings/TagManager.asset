@@ -16,6 +16,10 @@ TagManager:
   - endMenu
   - Ray
   - GameManager
+  - respawnMessage
+  - playerInstructions
+  - staticInstructions
+  - interactiveInstructions
   layers:
   - Default
   - TransparentFX

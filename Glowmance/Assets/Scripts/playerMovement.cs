@@ -9,10 +9,12 @@ public class playerMovement : MonoBehaviour
     SpriteRenderer _sr;
     GameObject _tailGlow;
     GameObject _loveLetter;
-    GameObject _loveLetterText;
+    // GameObject _loveLetterText;
     Animator _animator;
     public GameObject _dialogueBox;
     Dialogue _dialogueScript;
+    public GameObject _respawnMessage;
+    public RespawnMessage _respawnScript;
     public GameObject _gm;
     public GameManager GameManager;
     [SerializeField] float _moveSpeed;
@@ -31,6 +33,8 @@ public class playerMovement : MonoBehaviour
         _dialogueScript = _dialogueBox.GetComponent<Dialogue>();
         _gm = GameObject.FindGameObjectWithTag("GameManager");
         GameManager = _gm.GetComponent<GameManager>();
+        _respawnMessage = GameObject.FindGameObjectWithTag("respawnMessage");
+        _respawnScript = _respawnMessage.GetComponent<RespawnMessage>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,7 +43,7 @@ public class playerMovement : MonoBehaviour
         _sr = gameObject.GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
         _loveLetter = GameObject.FindWithTag("loveLetter");
-        _loveLetterText = GameObject.FindWithTag("textLoveLetter");
+        // _loveLetterText = GameObject.FindWithTag("textLoveLetter");
         _tailGlow = GameObject.FindWithTag("TailGlow");
         _tailGlow.SetActive(true);
         _isLitAf = true;
@@ -126,7 +130,7 @@ public class playerMovement : MonoBehaviour
         // Lumina falls to her death / respawn
         if (collision.gameObject.tag == "fallDeath")
         {
-            deathRespawn();
+            deathRespawn(0);
         }
 
         // Spider moves to Lumina if light is on
@@ -135,7 +139,7 @@ public class playerMovement : MonoBehaviour
         // Spider kills Lumina / respawn
         if (collision.gameObject.tag == "spider" && _isLitAf == true)
         {
-            deathRespawn();
+            deathRespawn(1);
 
             // ALT code: Lumina is destroyed
             // Destroy(gameObject);
@@ -154,7 +158,6 @@ public class playerMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "Ray")
         {
-            Debug.Log("Ray and Lumina collide");
             GameManager.GameOver();
         }
     }
@@ -167,33 +170,45 @@ public class playerMovement : MonoBehaviour
         }
     }
 
-    void deathRespawn()
+    void deathRespawn(int deathType)
     {
         // TO DO create text with 'Dead' message and maybe a pause to make respawn less jarring
+        _sr.enabled = false;
+        StartCoroutine(RespawnMessagePopup(deathType));
+    }
 
+    IEnumerator LoveLetterTextPopup()
+    {
+        // Wait 2 sedonds
+        yield return new WaitForSeconds(.75f);
+        // Show dialogue box
+        _dialogueBox.SetActive(true);
+        _dialogueBox.GetComponent<Image>().color = new Color(_dialogueBox.GetComponent<Image>().color.r, _dialogueBox.GetComponent<Image>().color.g, _dialogueBox.GetComponent<Image>().color.b, 240);
+        // Run dialogue script
+        _dialogueScript.StartDialogue();
+    }
+
+    IEnumerator RespawnMessagePopup(int deathType)
+    {
+        // Wait .25 seconds
+        yield return new WaitForSeconds(.15f);
+        // Run respawn message script
+        _respawnScript.runRespawnMessage(deathType);
+        yield return new WaitForSeconds(4);
+        // Respawn sprite
         // If love letter has been collected
         if (_loveLetter.activeSelf == false)
         {
             // Respawn at love letter checkpoint
             transform.position = _respawnPos;
+            _sr.enabled = true;
         }
         else
         {
             // Respawn at start
             transform.position = _startPos;
+            _sr.enabled = true;
         }
-    }
-
-    IEnumerator LoveLetterTextPopup()
-    {
-        Debug.Log("coroutine started");
-        // Wait 2 sedonds
-        yield return new WaitForSeconds(.75f);
-        // Show dialogue box
-        _dialogueBox.SetActive(true);
-        _dialogueBox.GetComponent<Image>().color = new Color(_dialogueBox.GetComponent<Image>().color.r, _dialogueBox.GetComponent<Image>().color.g, _dialogueBox.GetComponent<Image>().color.b, 255);
-        // Run dialogue script
-        _dialogueScript.StartDialogue();
     }
 }
 
